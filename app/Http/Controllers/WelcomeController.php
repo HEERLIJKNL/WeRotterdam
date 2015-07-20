@@ -34,7 +34,7 @@ class WelcomeController extends Controller {
 	{
 
 		$categories = categorie::with('products','products.images')->get();
-		return view('home',compact('categories'));
+		return view('coming-soon',compact('categories'));
 	}
 
 }
