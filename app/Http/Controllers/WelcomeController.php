@@ -33,8 +33,8 @@ class WelcomeController extends Controller {
 	public function index()
 	{
 
-		$categories = categorie::with('products','products.images')->get();
-		return view('coming-soon',compact('categories'));
+		//$categories = categorie::with('products','products.images')->get();
+		return view('coming-soon');
 	}
 
 }
