@@ -36,6 +36,7 @@ h2.p-title{
     padding: 20px 60px;
     background-color: rgb(18, 175, 13);
     color: white;
+    display:inline-block;
 }
 
 .bread-crumb{
@@ -573,7 +574,11 @@ ul.product-img-thumbs img {
     display: block;
     border-radius: 4px;
     overflow: auto;
+    width: 100%;
     margin-bottom: 10px;
+}
+.payment-bar input[type='radio'] {
+    margin: 0px 12px 0px 0px;
 }
 .payment-bar.active{
     border:2px solid #06AD00;
@@ -589,3 +594,16 @@ ul.product-img-thumbs img {
 .payment-logo.ideal{        background-position: -12px -4px;   width: 50px; }
 .payment-logo.creditcard{   background-position: -70px -4px;  width: 152px; }
 .payment-logo.paypal{       background-position: -228px -4px;  width: 84px; }
+
+.deliver-block{
+    background-color:#eaeaea;
+    margin-bottom:10px;
+}
+.deliver-block .deliver-title{
+    font-weight:bold;
+    padding:10px;
+}
+.deliver-block .deliver-info-field{
+    border-top:1px solid white;
+    padding:10px;
+}

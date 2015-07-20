@@ -46,10 +46,23 @@ $(function(){
 });
 
 $(function(){
+    if($('.payment-bar').length > 0){ SetPayment(); }
     $('.payment-bar').on('click',function(e){
-        e.preventDefault();
-        $('.payment-bar').removeClass('active');
-
-        $(this).addClass('active');
+        $(this).find(".col-sm-4.info input[type='radio']").prop('checked',true);
+        SetPayment();
     });
+
+    function HighLightBar(bar){
+        $('.payment-bar').removeClass('active');
+        bar.addClass('active');
+    }
+    function SetPayment(){
+        $("input[name='payment']").each(function(){
+           if($(this).prop('checked')){
+               HighLightBar($(this).closest('.payment-bar'));
+               $('.deliver-info-field.payment').html($(this).val().toUpperCase());
+               return false;
+           }
+        });
+    }
 });
