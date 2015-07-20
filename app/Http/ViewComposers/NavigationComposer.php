@@ -5,6 +5,10 @@ use App\NavigationItem;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\View\View;
 
+/**
+ * Class NavigationComposer
+ * @package App\Http\ViewComposers
+ */
 class NavigationComposer
 {
 
@@ -13,18 +17,25 @@ class NavigationComposer
      */
     protected $NavigationItems;
 
+
     /**
-     *
+     * @var Cart
      */
-    public function __construct(){
+    protected $Cart;
+
+    /**
+     * @param Cart $cart
+     */
+    public function __construct(Cart $cart){
         $this->NavigationItems = NavigationItem::active()->get();
+        $this->Cart = $cart;
     }
 
     /**
      * @param View $view
      */
-    public function compose(View $view, Cart $cart){
-        $view->with(['NavigationItems' => $this->NavigationItems,'Cart' => $cart]);
+    public function compose(View $view){
+        $view->with(['NavigationItems' => $this->NavigationItems,'Cart' => $this->Cart]);
     }
 
 }

@@ -65,8 +65,8 @@
       <file leaf-file-name="NavigationComposer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/NavigationComposer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5006135">
-              <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.5214724">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -859,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/NavigationComposer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5006135">
-          <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.5214724">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
