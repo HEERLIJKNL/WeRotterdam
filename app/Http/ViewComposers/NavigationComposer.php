@@ -23,8 +23,8 @@ class NavigationComposer
     /**
      * @param View $view
      */
-    public function compose(View $view){
-        $view->with(['NavigationItems' => $this->NavigationItems,'Cart' => Cart::class]);
+    public function compose(View $view, Cart $cart){
+        $view->with(['NavigationItems' => $this->NavigationItems,'Cart' => $cart]);
     }
 
 }
