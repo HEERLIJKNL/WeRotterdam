@@ -1,0 +1,93 @@
+.cms{
+    padding-left:0px;
+}
+.glyph-style-btn{
+    font-size: 12px;
+    background-color: #15AF0D;
+    padding: 4px;
+    color: white;
+    border-radius: 4px;
+}
+.edit-pencil{
+    display: inline-block;
+    padding: 8px;
+    background-color: rgb(255, 150, 0);
+    border-radius: 4px;
+    color:white;
+}
+.edit-remove{
+    display: inline-block;
+    padding: 8px;
+    background-color: red;
+    border-radius: 4px;
+    color:white;
+}
+
+.left-bar{
+    position: fixed;
+    height: 100%;
+    background-color: #15af0d;
+    width: 22%;
+}
+.menu ul{
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+}
+.menu ul li a{
+    display:block;
+    color:white;
+    padding:10px;
+    width:100%;
+}
+.menu ul li a:hover{
+    background-color:#0D9906;
+    text-decoration: none;
+}
+
+.profile{
+    background-color:#5b5b5b;
+    padding:10px;
+}
+.profile .user{
+    font-size: 18px;
+    font-weight: bold;
+    color: #B3B3B3;
+}
+.profile .actions a{
+    font-size:12px;
+    color:white;
+}
+
+
+.main-screen{
+    border-top:1px solid #acacac;
+}
+
+
+
+.products{
+    margin-top:20px;
+}
+.products>tbody>tr>td{
+    vertical-align: middle;
+}
+.products .price{
+    background-color: #15AF0D;
+    color:white;
+
+    text-align: center;
+}
+.products .edit{
+    text-align:center;
+}
+
+
+@media (max-width: 992px){
+    .left-bar{
+        position: relative;
+        height: 62px;
+        background-color: #15af0d;
+        width: 100%;
+    }
+}

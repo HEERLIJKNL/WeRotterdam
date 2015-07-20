@@ -1,0 +1,26 @@
+<h2>BONUS</h2>
+<div class='bonus-title'>PR-pakket voor best presterende restaurant t.w.v. € 9.500,- </div>
+
+<div class='bonus-subtitle'>Ingrediënten:</div>
+<ul>
+<li>Een artikel in het magazine ‘Villa d’Arte’ (oplage > 360.000) 
+<li>Een maand lang in de schijnwerpers op de homepage van HEERLIJK met een promo film van jouw restaurant.
+<li>Een jaar lang gratis het 3-sterren* pakket op HEERLIJK.nl
+<li>Uitgelicht worden op de homepage als ‘Restaurant van de maand’
+<li>Via HEERLIJK social media kanalen als winnaar van H10D onder de aandacht worden gebracht.
+</ul>
+
+<div class='bonus-subtitle'>Bereidingswijze:</div>
+<ul>
+<li>Al deze prachtige media aandacht is voor het restaurant dat:
+<li>De meeste Visa en MasterCard transacties heeft (50%)
+<li>Het beste scoort qua review cijfers (50%)
+</ul>
+Dit pakket wordt aangeboden door:<br />
+<img src='img/mogelijk_gemaakt_door.jpg' />
+
+<div>
+Kijk <a href='/?url=actievoorwaarden'>hier</a> voor de actievoorwaarden<br />
+*HEERLIJK biedt verschillende mogelijkheden om restaurants te presenteren.<br /> 
+Dit is het meest uitgebreide profielpakket
+</div>
