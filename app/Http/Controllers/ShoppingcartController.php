@@ -20,19 +20,19 @@ class ShoppingcartController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Cart $cart)
 	{
-		return view('shoppingcart.shoppingcart',['cart' => Cart::class]);
+		return view('shoppingcart.shoppingcart',['cart' => $cart]);
 	}
 
 	/**
 	 * @return \Illuminate\View\View
      */
-	public function account()
+	public function account(Cart $cart)
 	{
 
 		//return view("shoppingcart.account",['cart' => Cart::class]);
-		return view("shoppingcart.account-data",['cart' => Cart::class]);
+		return view("shoppingcart.account-data",['cart' => $cart]);
 	}
 	public function account_update(Request $request)
 	{
@@ -43,9 +43,9 @@ class ShoppingcartController extends Controller {
 	/**
 	 * @return \Illuminate\View\View
      */
-	public function payment()
+	public function payment(Cart $cart)
 	{
-		return view("shoppingcart.payment",['cart' => Cart::class]);
+		return view("shoppingcart.payment",['cart' => $cart]);
 	}
 
 
