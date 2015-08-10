@@ -87,6 +87,7 @@ class ShoppingcartController extends Controller {
 	{
 		$order = new Order();
 		$order->fill($request->all());
+		$order->email = $request->input('order_email');
 
 		if($request->input('email') && $request->input('password')) {
 			$request->merge(array('name' => $order->Fullname));

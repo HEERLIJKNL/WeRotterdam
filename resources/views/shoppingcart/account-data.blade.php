@@ -87,20 +87,20 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Postcode</label>
+                                    <label for="postalcode" class="col-sm-2 control-label">Postcode</label>
                                     <div class="col-sm-4">
-                                        <input type="text" value="@if(isset($user->Profile->postalcode)){{$user->Profile->postalcode}}@else{{old('postalcode')}}@endif"  name="postalcode" class="form-control" id="inputEmail3" placeholder="Postcode">
+                                        <input type="text" value="@if(isset($user->Profile->postalcode)){{$user->Profile->postalcode}}@else{{old('postalcode')}}@endif"  name="postalcode" class="form-control" id="postalcode" placeholder="Postcode">
                                     </div>
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Plaats</label>
+                                    <label for="city" class="col-sm-2 control-label">Plaats</label>
                                     <div class="col-sm-4">
-                                        <input type="text" value="@if(isset($user->Profile->city)){{$user->Profile->city}}@else{{old('city')}}@endif"  name="city" class="form-control" id="inputEmail3" placeholder="Plaats">
+                                        <input type="text" value="@if(isset($user->Profile->city)){{$user->Profile->city}}@else{{old('city')}}@endif"  name="city" class="form-control" id="city" placeholder="Plaats">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                    <label for="order_email" class="col-sm-2 control-label">Email</label>
                                     <div class="col-sm-4">
-                                        <input type="email" value="@if(isset($user->Profile->email)){{$user->Profile->email}}@else{{old('email')}}@endif"  name="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                        <input type="email" value="@if(isset($user->Profile->email)){{$user->Profile->email}}@else{{old('order_email')}}@endif"  name="order_email" class="form-control" id="order_email" placeholder="Email">
                                     </div>
                                     <label for="inputEmail3" class="col-sm-2 control-label">Telefoon</label>
                                     <div class="col-sm-4">
@@ -128,9 +128,9 @@
                     <div class="row content-container">
                         <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                    <label for="account_email" class="col-sm-2 control-label">Email</label>
                                     <div class="col-sm-5">
-                                        <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                        <input type="email" name="email" class="form-control" id="account_email" placeholder="Email">
                                     </div>
                                     <div class="col-sm-5">
                                         <input type="email" name="email_confirmation" class="form-control" id="inputEmail3" placeholder="Email nogmaals">
