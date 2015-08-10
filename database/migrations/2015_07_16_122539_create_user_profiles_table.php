@@ -26,6 +26,8 @@ class CreateUserProfilesTable extends Migration {
 			$table->string('postalcode');
 			$table->string('city');
 			$table->string('country');
+			$table->string('email');
+			$table->string('telephone');
 			$table->timestamps();
 		});
 	}

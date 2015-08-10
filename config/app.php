@@ -149,6 +149,7 @@ return [
 
 		'Intervention\Image\ImageServiceProvider',
 		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
+		'App\Src\Buckaroo\BuckarooServiceProvider'
 
 	],
 

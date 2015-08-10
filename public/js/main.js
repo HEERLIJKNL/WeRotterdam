@@ -65,4 +65,23 @@ $(function(){
            }
         });
     }
+
+    $(".payment-select").submit(function(e){
+        e.preventDefault();
+
+        var PayProvider = $('input[name=payment]:checked', '.payment-select').val();
+
+        if(PayProvider == "creditcard")
+            PayProvider = $('select[name="creditcard-type"]').val();
+
+        var Bank = $('select[name="bank"]').val();
+
+        $.post( "/shoppingcart/payment", {
+            payment: PayProvider,
+            bank: Bank
+        }).done(function(data){
+            $('body').append(data);
+            $('#buckaroo').submit();
+        });
+    });
 });

@@ -1,15 +1,4 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
 /** CMS */
 Route::group(['middleware' => 'auth.admin'], function () {
 	/** Dashboard */
@@ -44,18 +33,37 @@ Route::get('home', 						'HomeController@index');
 
 Route::get('product/{slug}', 			'ProductController@detail');
 
+/*
+Route::get('contact',function(){
+	return view("contact.contact");
+});
+*/
+
 Route::get('shoppingcart',				'ShoppingcartController@index');
 Route::get('shoppingcart/add/{id}',		'ShoppingcartController@add');
 Route::post('shoppingcart/add',			'ShoppingcartController@addpost');
 Route::get('shoppingcart/remove/{id}',	'ShoppingcartController@remove');
 Route::put('shoppingcart',				'ShoppingcartController@update');
 Route::get('shoppingcart/step/1',		'ShoppingcartController@account');
-Route::post('shoppingcart/step/1',		'ShoppingcartController@account_update');
+Route::get('shoppingcart/step/1/adres',	'ShoppingcartController@adres');
 Route::get('shoppingcart/step/2',		'ShoppingcartController@payment');
+
+Route::post('shoppingcart/step/1/login','ShoppingcartController@login');
+Route::post('shoppingcart/step/1',		'ShoppingcartController@store_adres');
+
+/**
+ * Payment Routes
+ */
+Route::post('shoppingcart/payment',				'PaymentController@pay');
+Route::post('shoppingcart/payment/success', 	'PaymentController@success');
+Route::post('shoppingcart/payment/failed', 		'PaymentController@failed');
 
 Route::controllers([
 	'auth' => 			'Auth\AuthController',
 	'password' => 		'Auth\PasswordController',
 ]);
+
+Route::get('contact', 'ContactController@index');
+Route::post('contact', 'ContactController@send');
 
 Route::any('{url}', 			'ContentController@index')->where('url','(.*)?');

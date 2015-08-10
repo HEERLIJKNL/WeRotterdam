@@ -38,9 +38,10 @@
 <script type="text/javascript">
     tinymce.init({ 	selector: "textarea",
         content_css: [
-            '/css/main.css',
             '//fonts.googleapis.com/css?family=Lato:100',
-            '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'],
+            '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css',
+            '/css/main.css'],
+        body_class: "container-fluid",
         theme: "modern",
         skin: 'light',
         relative_urls : false,

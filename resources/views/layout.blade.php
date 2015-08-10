@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel='stylesheet' type="text/css">
+    <link href="/css/bootstrap.min.css" rel='stylesheet' type="text/css">
     <link href="/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>

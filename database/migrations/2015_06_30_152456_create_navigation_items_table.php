@@ -14,10 +14,10 @@ class CreateNavigationItemsTable extends Migration {
 	{
 		Schema::create('navigation_items', function(Blueprint $table)
 		{
+			$table->increments('id');
 			$table->string('name');
 			$table->char('button',40);
 			$table->string('url');
-			$table->increments('id');
 			$table->boolean('active')->default(0);
 			$table->tinyInteger('order');
 			$table->timestamps();

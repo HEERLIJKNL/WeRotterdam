@@ -238,7 +238,7 @@ footer .category{
     padding: 34px;
     min-height: 340px;
     vertical-align: top;
-    margin-bottom: 10px;
+    margin:10px;
     min-height: 425px;
     box-shadow: 0px 2px 4px #E0E0E0;
     position:relative;
@@ -557,6 +557,10 @@ ul.product-img-thumbs img {
     height:25px;
     width:100%;
 }
+.shoppingcart-steps.graph td.active div.completed {
+    background-color: #00BE0E;
+    border-bottom: 4px solid #02970D;
+}
 .shoppingcart-steps.graph td div{
     background-color:white;
 }
@@ -589,6 +593,19 @@ ul.product-img-thumbs img {
     font-size: 30px;
     color: grey;
 }
+.payment-bar .subselect{
+    display:none;
+    padding-top:22px;
+}
+.payment-bar .subselect select{
+    width: 100%;
+    font-size: 18px;
+    border: 4px solid #E3E3E3;
+    font-weight: bold;
+}
+.payment-bar.active .subselect{
+    display:block;
+}
 
 .payment-logo{              background-image:url("/images/Payment/Sprites_Payments.jpg"); height:50px; margin-top:18px; }
 .payment-logo.ideal{        background-position: -12px -4px;   width: 50px; }
@@ -606,4 +623,38 @@ ul.product-img-thumbs img {
 .deliver-block .deliver-info-field{
     border-top:1px solid white;
     padding:10px;
+}
+
+
+/* Content pieces */
+.ct{
+    margin-bottom:50px;
+}
+.ct .c-pad{
+    padding-left:0px;
+    padding-right:0px;
+}
+.ct .green-bar{
+    color:white;
+    background-color:#12af0d;
+    padding:10px;
+
+    margin-bottom:10px;
+}
+.ct .ct-container{
+    padding:10px;
+    overflow:auto;
+    width:100%;
+}
+.ct .light-grey{
+    background-color:#eaeaea;
+}
+.ct .dark-grey{
+
+}
+.ct .page-sub-title{
+    color:#b3b2b2;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0px 0px 10px 0px;
 }

@@ -18,9 +18,9 @@
             </table>
             <table class="shoppingcart-steps text">
                 <tr>
-                    <td class="active">1. Uw winkelwagen</td>
-                    <td class="active">2. Persoonlijke gegevens</td>
-                    <td class="active">3. Betaling/Aflevering</td>
+                    <td class="active"><a href="/shoppingcart">1. Uw winkelwagen</a></td>
+                    <td class="active"><a href="/shoppingcart/step/1">2. Persoonlijke gegevens</a></td>
+                    <td class="active"><a href="/shoppingcart/step/2">3. Betaling/Aflevering</a></td>
                     <td>4. Bestellen</td>
                 </tr>
             </table>
@@ -36,9 +36,15 @@
                         <div class="deliver-block">
                             <div class="deliver-title">Bezorgadres</div>
                             <div class="deliver-info-field">
-                                Softbalpad 15<br />
-                                3223ES Hellevoetsluis<br />
-                                Nederland
+                                {{$order->Fullname}}<br />
+                                {{$order->Address}}<br />
+                                {{$order->city}}
+                            </div>
+
+                            <div class="deliver-title">Contact</div>
+                            <div class="deliver-info-field">
+                                {{$order->email}}<br />
+                                {{$order->telephone}}
                             </div>
                         </div>
 
@@ -66,27 +72,34 @@
                 </div>
                 <div class="row content-container">
                     <div class="col-md-12">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal payment-select">
                             <div class="payment-bar">
                                 <div class="col-sm-4 info"><input type="radio" name="payment" value="ideal" checked /> IDEAL</div>
-                                <div class="col-sm-8">
+                                <div class="col-sm-4">
                                     <div class="payment-logo ideal"></div>
+                                </div>
+                                <div class="col-sm-4 subselect">
+                                    <select name="bank">
+                                        @foreach($banks as $code => $name)
+                                            <option value="{{$code}}">{{$name}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="payment-bar">
                                 <div class="col-sm-4 info"><input type="radio" name="payment" value="creditcard" /> Creditcard</div>
-                                <div class="col-sm-8">
+                                <div class="col-sm-4">
                                     <div class="payment-logo creditcard"></div>
                                 </div>
-                            </div>
-                            <div class="payment-bar">
-                                <div class="col-sm-4 info"><input type="radio" name="payment" value="paypal" /> Paypal</div>
-                                <div class="col-sm-8">
-                                    <div class="payment-logo paypal"></div>
+                                <div class="col-sm-4 subselect">
+                                    <select name="creditcard-type">
+                                        <option value="visa">Visa</option>
+                                        <option value="mastercard">Mastercard</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="pull-right">
-                                <a href="/shoppingcart/step/3" class="g-btn">Bestelling afronden</a>
+                                <button type="submit" class="g-btn">Bestelling afronden</button>
                             </div>
                         </form>
                     </div>

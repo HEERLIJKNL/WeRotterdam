@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration {
 			$table->string('slug')->unique();
 			$table->text('description');
 			$table->float('price');
+			$table->integer('stored');
 			$table->integer('amount')->default(0);
 			$table->integer('categorie_id')->index();
 			$table->integer('subcategorie_id')->default(0)->index();

@@ -79,7 +79,7 @@
                 </tbody>
             </table>
             <div class="pull-right">
-                <a href="/shoppingcart/step/1" class="g-btn">Bestelling afronden</a>
+                <a href="/shoppingcart/step/1" class="g-btn">Persoonlijke gegevens</a>
             </div>
         </div>
     </div>

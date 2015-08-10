@@ -18,8 +18,8 @@
             </table>
             <table class="shoppingcart-steps text">
             <tr>
-                <td class="active">1. Uw winkelwagen</td>
-                <td class="active">2. Persoonlijke gegevens</td>
+                <td class="active"><a href="/shoppingcart">1. Uw winkelwagen</a></td>
+                <td class="active"><a href="/shoppingcart/step/1">2. Persoonlijke gegevens</a></td>
                 <td>3. Betaling/Aflevering</td>
                 <td>4. Bestellen</td>
             </tr>
@@ -33,7 +33,8 @@
                 <div class="row content-container">
                     <div class="col-md-12">
 
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" method="post" action="/shoppingcart/step/1/login">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}" />
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                                 <div class="col-sm-10">
@@ -67,7 +68,7 @@
                 </div>
                 <div class="row content-container">
                     <div class="col-md-12 text-center">
-                        <button class="g-btn">Gegevens invullen</button>
+                        <a href="/shoppingcart/step/1/adres" class="g-btn">Gegevens invullen</a>
                     </div>
                 </div>
             </div>
