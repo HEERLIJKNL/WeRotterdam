@@ -31,6 +31,7 @@ class EmailPurchaseConfirmation {
 		$cart 	= $event->cart;
 
 		Mail::send("emails.order",compact('order','cart'),function($message) use($order){
+			$message->from('bestelling@werotterdam.com', "We'Rotterdam);
 			$message->to($order->email)->subject('Uw bestelling');
 		});
 
