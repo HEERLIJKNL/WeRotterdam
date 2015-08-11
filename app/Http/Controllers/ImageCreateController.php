@@ -17,7 +17,7 @@ class ImageCreateController extends Controller {
 	}
 
 	private function createpolaroid(Request $request){
-		$root = $request->server('DOCUMENT_ROOT');
+		$root = $request->server('DOCUMENT_ROOT')."/public";
 		$bg =  Image::make($root.$request->input("bg_image"));
 
 		$img = Image::make($request->file('photo'))->fit(295,295);
