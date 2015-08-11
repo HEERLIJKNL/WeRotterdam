@@ -9,7 +9,7 @@
     <link href="/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="container">
+<div class="container main">
     <div class="row">
         <div class="top-bar">
             <div class="logo">
