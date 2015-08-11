@@ -59,9 +59,8 @@
 <div class="imagecreatepopup">
     <div class="title">Selecteer een foto</div>
     <ul>
-        <li><img src='/images/imagecreate/polaroid_green_bg.jpg'></li>
+        <li><img src='/images/imagecreate/polaroidgreenbg.jpg'></li>
         <li><img src='/images/imagecreate/simple.jpg'></li>
-        <li><img src='/images/imagecreate/polaroid_rdam_bg.jpg'></li>
     </ul>
     <a class="close-me" href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 </div>

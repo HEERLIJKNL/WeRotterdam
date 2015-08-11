@@ -9,7 +9,7 @@ use Intervention\Image\Facades\Image;
 class ImageCreateController extends Controller {
 
 	public function create(Request $request){
-		if(str_contains($request->get("bg-image"),"simple"))
+		if(str_contains($request->input("bg_image"),"simple"))
 			return $this->createsimple($request);
 
 
@@ -17,7 +17,8 @@ class ImageCreateController extends Controller {
 	}
 
 	private function createpolaroid(Request $request){
-		$bg =  Image::make($request->get("bg-image"));
+		$root = $request->server('DOCUMENT_ROOT');
+		$bg =  Image::make($root.$request->input("bg_image"));
 
 		$img = Image::make($request->file('photo'))->fit(295,295);
 		$img->rotate(-16);
