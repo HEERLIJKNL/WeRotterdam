@@ -63,9 +63,7 @@
 
                     </div>
                     <div class="info-box">
-                        <p>Nam porta augue hendrerit augue dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin convallis ante non ornare malesuada. Mauris eget consectetur mi. Aenean lectus nibh, convallis ac dignissim vitae, ullamcorper eget elit. Vestibulum viverra vulputate urna. Phasellus eu nunc congue, aliquet erat in, lacinia quam. Mauris euismod leo est, in viverra risus egestas id. Suspendisse elementum ante vel sagittis condimentum. Fusce dictum convallis purus, ac suscipit ante lobortis eget. Nulla quis arcu pharetra, iaculis lorem at, fringilla nisl. Cras a augue eu erat tristique sollicitudin.</p>
-
-                        <p>Pellentesque sit amet quam id ex venenatis tincidunt convallis vel felis. Sed semper est at nisl dapibus euismod. Suspendisse quis ipsum a mauris fermentum elementum ut a urna. Cras felis erat, consectetur sit amet risus vel, pharetra molestie felis. In volutpat dui et dui dictum venenatis. Maecenas tempor mattis odio ac aliquet. Nulla vehicula diam augue, non auctor libero fringilla et.</p>
+                        <p>{{$product->description}}</p>
                     </div>
                     <div class="order-box">
                         <span>
