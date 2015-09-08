@@ -236,7 +236,7 @@ footer .category{
     font-size: 24px;
 }
 .product-container{
-    border-top:1px solid #5b5b5b;
+    /*order-top:1px solid #5b5b5b;*/
 }
 .product-line{
     margin: 10px 0px;
