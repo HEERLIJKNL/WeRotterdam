@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\NavigationItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class NavigationController extends Controller {
 
@@ -26,7 +27,8 @@ class NavigationController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		$NavigationItem = new NavigationItem;
+		return view('cms.navigation.edit',compact('NavigationItem'));
 	}
 
 	/**
@@ -34,9 +36,12 @@ class NavigationController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$NavigationItem = NavigationItem::create($request->all());
+		$NavigationItem->save();
+
+		return Redirect::route("admin.navigation.index");
 	}
 
 	/**
@@ -58,7 +63,8 @@ class NavigationController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$NavigationItem = NavigationItem::find($id);
+		return view('cms.navigation.edit',compact('NavigationItem'));
 	}
 
 	/**
@@ -67,9 +73,13 @@ class NavigationController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id,Request $request)
 	{
-		//
+		$NavigationItem = NavigationItem::find($id);
+		$NavigationItem->fill($request->all());
+		$NavigationItem->save();
+
+		return Redirect::route("admin.navigation.index");
 	}
 
 	/**
@@ -81,6 +91,23 @@ class NavigationController extends Controller {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function activate($id)
+	{
+		$NavigationItem = NavigationItem::find($id);
+		$NavigationItem->active = 1;
+		$NavigationItem->save();
+
+		return Redirect::route("admin.navigation.index");
+	}
+
+	public function deactivate($id){
+		$NavigationItem = NavigationItem::find($id);
+		$NavigationItem->active = 0;
+		$NavigationItem->save();
+
+		return Redirect::route("admin.navigation.index");
 	}
 
 }

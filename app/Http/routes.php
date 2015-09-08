@@ -15,12 +15,13 @@ Route::group(['middleware' => 'auth.admin'], function () {
 	Route::post('admin/categories/update',		'Cms\CategorieController@update');
 
 	/** Navigation */
-	Route::get('admin/navigation',				'Cms\NavigationController@index');
-
+	Route::resource('admin/navigation',			'Cms\NavigationController');
+	Route::get('admin/navigation/activate/{id}'		,'Cms\NavigationController@activate');
+	Route::get('admin/navigation/deactivate/{id}'	,'Cms\NavigationController@deactivate');
 
 
 	Route::resource('admin/pages',				'Cms\PageController');
-	Route::resource('admin/pages/{id}/delete',	'Cms\PageController@destroy');
+	//Route::resource('admin/pages/{id}/delete',	'Cms\PageController@destroy');
 
 });
 /** EINDE CMS */
