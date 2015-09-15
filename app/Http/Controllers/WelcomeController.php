@@ -1,19 +1,11 @@
 <?php namespace App\Http\Controllers;
 
 use App\categorie;
+use App\product;
+use App\Src\Buckaroo\Buckaroo;
 
 class WelcomeController extends Controller {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Welcome Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders the "marketing page" for the application and
-	| is configured to only allow guests. Like most of the other sample
-	| controllers, you are free to modify or remove it as you desire.
-	|
-	*/
 
 	/**
 	 * Create a new controller instance.
@@ -30,11 +22,18 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Buckaroo $buckaroo)
 	{
-
-		$categories = categorie::with('products','products.images')->get();
-		return view('coming-soon',compact('categories'));
+		/*
+		return $buckaroo->fetchForm([
+				'price' => 10,
+				'payment_method' => 'ideal',
+				'return_url' => 'http://local.werotterdam.com',
+				'invoice_nr' => '2015AB3423262'
+		]);
+		*/
+		$categories = categorie::with('products','products.images','products.sizes')->get();
+		return view('home',compact('categories'));
 	}
 
 }

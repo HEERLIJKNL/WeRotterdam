@@ -1,16 +1,12 @@
 <?php namespace App\Http\Controllers\Cms;
 
-use App\categorie;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
-/**
- * Class CategorieController
- * @package App\Http\Controllers\Cms
- */
-class CategorieController extends Controller {
+class GeneralController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -19,8 +15,7 @@ class CategorieController extends Controller {
 	 */
 	public function index()
 	{
-		$categories = categorie::all();
-		return view('cms.categories.categories',compact('categories'));
+		return view('cms.general.general');
 	}
 
 	/**
@@ -30,7 +25,7 @@ class CategorieController extends Controller {
 	 */
 	public function create()
 	{
-		return view('cms.categories.edit');
+		//
 	}
 
 	/**
@@ -40,12 +35,10 @@ class CategorieController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-		$categorie = new categorie();
-		$categorie->fill($request->all());
-		$categorie->slug = $request->name;
-		$categorie->save();
+		Config::set('site_settings.deliverycosts', $request->input('deliverycosts'));
+		Config::set('site_settings.email', $request->input('email'));
 
-		return redirect()->action('Cms\CategorieController@index');
+		//return redirect()->back();
 	}
 
 	/**
@@ -67,22 +60,18 @@ class CategorieController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$categorie = categorie::find($id);
-		return view('cms.categories.edit',compact('categorie'));
+		//
 	}
 
-
 	/**
-	 * @param Request $request
-     */
-	public function update($id, Request $request)
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id)
 	{
-		$categorie = categorie::find($id);
-		$categorie->fill($request->all());
-		$categorie->slug = $request->name;
-		$categorie->save();
-
-		return redirect()->action('Cms\CategorieController@index');
+		//
 	}
 
 	/**
@@ -93,9 +82,7 @@ class CategorieController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		categorie::destroy($id);
-
-		return redirect()->back();
+		//
 	}
 
 }

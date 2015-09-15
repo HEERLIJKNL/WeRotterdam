@@ -29,6 +29,7 @@ class CreateOrdersTable extends Migration {
 			$table->string('email');
 			$table->string('telephone');
 			$table->string('payment_method');
+			$table->float('payment_total');
 			$table->boolean('payed')->default(0);
 			$table->timestamps();
 		});

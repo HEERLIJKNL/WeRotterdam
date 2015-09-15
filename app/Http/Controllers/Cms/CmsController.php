@@ -16,6 +16,6 @@ class CmsController extends Controller {
 	public function index()
 	{
 		$user = Auth::user();
-		return view('cms.main',compact('user'));
+		return view('cms.main-layout',compact('user'));
 	}
 }

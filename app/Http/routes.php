@@ -5,14 +5,16 @@ Route::group(['middleware' => 'auth.admin'], function () {
 	Route::get('admin', 'Cms\CmsController@index');
 
 	/** Products */
-	Route::get('admin/products', 				'Cms\ProductController@index');
-	Route::get('admin/products/delete/{id}', 	'Cms\ProductController@delete');
-	Route::post('admin/products/update', 		'Cms\ProductController@update');
+	Route::resource('admin/products', 				'Cms\ProductController');
+	Route::post('admin/products/{id}/addphoto', 	'Cms\ProductController@addPhoto');
+	Route::post('admin/products/{id}/setsize', 		'Cms\ProductController@setSize');
+
+	Route::resource('admin/general',				'Cms\GeneralController');
+
+	Route::get('admin/images/{id}/destroy',			'Cms\ImageController@destroy');
 
 	/** Categories */
-	Route::get('admin/categories', 				'Cms\CategorieController@index');
-	Route::get('admin/categories/delete/{id}', 	'Cms\CategorieController@destroy');
-	Route::post('admin/categories/update',		'Cms\CategorieController@update');
+	Route::resource('admin/categories', 			'Cms\CategorieController');
 
 	/** Navigation */
 	Route::resource('admin/navigation',			'Cms\NavigationController');
@@ -64,7 +66,7 @@ Route::controllers([
 	'password' => 		'Auth\PasswordController',
 ]);
 
-Route::get('contact', 'ContactController@index');
-Route::post('contact', 'ContactController@send');
+Route::get('contact'	, 'ContactController@index');
+Route::post('contact'	, 'ContactController@send');
 
-Route::any('{url}', 			'ContentController@index')->where('url','(.*)?');
+Route::any('{url}'		, 'ContentController@index')->where('url','(.*)?');

@@ -6,6 +6,8 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel='stylesheet' type="text/css">
     <link href="/css/cms.css" rel="stylesheet" type="text/css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
     <script type="text/javascript" src="/js/cms/tinymce/tinymce.min.js"></script>
 </head>
 <body>
@@ -24,10 +26,13 @@
                 <div class="menu">
                     <ul>
                         <li><a href="/admin">Dashboard</a></li>
-                        <li><a href="/admin#/products">Producten</a></li>
-                        <li><a href="/admin#/categories">Categorieen</a></li>
+                        <li><a href="/admin/products">Producten</a></li>
+                        <li><a href="/admin/categories">Categorieen</a></li>
                         <li><a href="/admin/pages">Pagina beheer</a></li>
                         <li><a href="/admin/navigation">Menu beheer</a></li>
+                        <hr />
+                        <li><a href="/admin/orders">Orders</a></li>
+                        <li><a href="/admin/users">Users</a></li>
                     </ul>
                 </div>
             </div>

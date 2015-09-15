@@ -1,6 +1,12 @@
 .cms{
     padding-left:0px;
 }
+.add-link{
+    margin-top:10px;
+    margin-bottom:20px;
+
+    display:inline-block;
+}
 .glyph-style-btn{
     font-size: 12px;
     background-color: #15AF0D;
@@ -68,6 +74,7 @@
 
 .products{
     margin-top:20px;
+    margin-bottom:20px;
 }
 .products>tbody>tr>td{
     vertical-align: middle;
@@ -81,7 +88,69 @@
 .products .edit{
     text-align:center;
 }
+.products .edit form{
+    margin:0px;
+}
 
+.products .sizes{
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+.products .sizes li{
+    display:inline-block;
+}
+.products .sizes li .bl {
+    text-align: center;
+    background-color: white;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgb(126, 126, 126);
+}
+.products .sizes li .bl-title {
+    background-color: rgb(21, 175, 13);
+    padding: 2px 12px;
+    font-weight: bold;
+    color: white;
+}
+.products .sizes li .bl-stored {
+    padding: 2px 12px;
+}
+.products .sizes li .bl-stored input {
+    width:30px;
+    text-align:center;
+    border:0px;
+}
+
+.product-detail .product-size-block{
+
+}
+.product-pictures .product-img{
+    width: 250px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 14px;
+    box-shadow: 0px 2px 4px rgb(126, 126, 126);
+    background-color: #EDEDED;
+
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.product-pictures img{
+    width:100%;
+}
+.product-pictures .delete-img{
+    padding: 10px;
+    display: inline-block;
+    background-color: red;
+    color: white;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+}
+.product-pictures .upload-photo{
+    visibility:hidden;
+}
 
 @media (max-width: 992px){
     .left-bar{

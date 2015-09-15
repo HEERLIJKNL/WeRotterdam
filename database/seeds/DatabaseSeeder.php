@@ -41,7 +41,6 @@ class ProductTableSeeder extends Seeder{
 				'categorie_id' => $faker->randomElement($categories),
 				'description' => $faker->text,
 				'price' => $faker->randomFloat(2, 2, 200),
-				'amount' => $faker->randomNumber(2),
 				'slug' => $faker->slug
 			]);
 		}

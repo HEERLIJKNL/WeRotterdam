@@ -9,7 +9,7 @@
 			<div class="new-product right">
 				<div class="info">
 					<div class="title">
-						Groene hoody
+						Witte sweater <span>dames</span>
 					</div>
 					<div class="sizes">
 						Maten:
@@ -31,7 +31,7 @@
 				<div class="new-product left">
 					<div class="info">
 						<div class="title">
-							Groene hoody
+							Witte sweater <span>heren</span>
 						</div>
 						<div class="sizes">
 							Maten:
@@ -58,7 +58,7 @@
 		</div>
 		<div class="h-group h-right">
 			<div class="slider">
-				<img src="images/header_img.jpg"/>
+				<img src="images/header_img_02.jpg"/>
 			</div>
 		</div>
 	</div>
@@ -71,13 +71,14 @@
 			</div>
 			@foreach($categorie->products->chunk(4) AS $products)
 				@foreach($products AS $product)
+					@if($product->supply())
 					<div class="col-md-3 product-line">
 						<div class="product">
-							@foreach($product->images AS $image)
+							@if(count($product->images))
 								<div class="placeholder grow">
-									<img src="/images/products/{{$image->image}}">
+									<img src="/images/products/med_{{$product->images[0]->image}}">
 								</div>
-							@endforeach
+							@endif
 							<div>{{$product->name}}</div>
 							<a href="/product/{{$product->slug}}" class="detail">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span> Details
@@ -85,6 +86,7 @@
 							</a>
 						</div>
 					</div>
+					@endif
 				@endforeach
 			@endforeach
 		@endforeach

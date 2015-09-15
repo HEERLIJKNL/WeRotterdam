@@ -67,8 +67,13 @@
                                 <td class="block-content">
                                     <table>
                                         <tr>
-                                            <td></td>
+                                            <td>Naam product</td><td>Aantal</td><td>Prijs</td>
                                         </tr>
+                                        @foreach($cart AS $item)
+                                        <tr>
+                                            <td width="60%">{{$item->name}}</td><td width="20%">{{$item->qty}}</td><td>{{$item->price}}</td>
+                                        </tr>
+                                        @endforeach
                                     </table>
                                 </td>
                             </tr>

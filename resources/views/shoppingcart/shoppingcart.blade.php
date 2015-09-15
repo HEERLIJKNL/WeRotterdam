@@ -16,7 +16,7 @@
                 <td><div class="step"></div></td>
             </tr>
         </table>
-        <table class="shoppingcart-steps text"
+        <table class="shoppingcart-steps text">
             <tr>
                 <td class="active">1. Uw winkelwagen</td>
                 <td>2. Persoonlijke gegevens</td>
@@ -62,19 +62,19 @@
                             </form>
                         </td>
                         <td>
-                            &euro; {{$cartitem->subtotal}}
+                            &euro; {{number_format($cartitem->subtotal,2,",","")}}
                         </td>
                     </tr>
                     @endforeach
                     <tr class="shoppingcart-deliver">
                         <td></td>
                         <td class="text-right">Bezorgkosten:</td>
-                        <td>&euro; 29,95</td>
+                        <td>&euro; {{number_format(Config::get('site_settings.deliverycosts'),2,",","")}}</td>
                     </tr>
                     <tr class="shoppingcart-total">
                         <td></td>
                         <td class="text-right">Totaal:</td>
-                        <td class="price">&euro; {{$cart::total()}}</td>
+                        <td class="price">&euro; {{number_format($cart::total() + Config::get('site_settings.deliverycosts'),2,",","")}}</td>
                     </tr>
                 </tbody>
             </table>

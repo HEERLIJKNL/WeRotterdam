@@ -59,7 +59,7 @@
                             <div class="deliver-title">
                                 Totaal te betalen:
                             </div>
-                            <div class="deliver-info-field">&euro; {{$cart::total()}}</div>
+                            <div class="deliver-info-field">&euro; {{number_format($cart::total() + Config::get('site_settings.deliverycosts'),2,",","")}}</div>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model {
@@ -18,7 +19,8 @@ class Order extends Model {
         'country',
         'email',
         'telephone',
-        'payment_method'
+        'payment_method',
+        'payment_total'
     ];
 
 	public function Items(){
@@ -34,5 +36,20 @@ class Order extends Model {
     }
     public function getFullnameAttribute(){
         return ucfirst($this->attributes['firstname'])." ".(isset($this->attributes['subname']) ? $this->attributes['subname']." " : "").$this->attributes['lastname'];
+    }
+
+    public function saveitems($items){
+        foreach($items AS $item){
+            $order_item = new OrderItem(
+                [
+                    "product_id" => $item->id,
+                    "amount" => $item->qty,
+                    "price" => $item->price,
+                    "size" => $item->options->size
+                ]
+            );
+
+            $this->Items()->save($order_item);
+        }
     }
 }

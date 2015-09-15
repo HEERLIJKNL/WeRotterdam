@@ -1,12 +1,12 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
 use App\Order;
 use App\product;
 use App\Src\Buckaroo\Buckaroo;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Http\Request;
@@ -45,7 +45,7 @@ class ShoppingcartController extends Controller {
      */
 	public function login(Request $request)
 	{
-		if(Auth::attempt(['email' => $request->input('email'),'password' => $request->input('password')])){
+		if(Auth::attempt(['email' => $request->input('email'),'password' => $request->input('password')])) {
 			return redirect("/shoppingcart/step/1/adres");
 		}
 
@@ -137,7 +137,6 @@ class ShoppingcartController extends Controller {
 		Cart::add($product->id,$product->name,$request->input('amount'),$product->price,
 			[
 				'size' => $request->input('size'),
-				'color' => $request->input('color'),
 				'image' => $product->images[0]->image
 			]
 		);

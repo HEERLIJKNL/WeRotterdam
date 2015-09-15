@@ -10,7 +10,7 @@ class ProductController extends Controller {
 
 	public function detail($slug){
 
-		$product = product::where("slug", "=" , $slug)->with('images')->first();
+		$product = product::where("slug", "=" , $slug)->with('images','sizes')->first();
 		if(!$product) abort(404);
 
 		return view('product.detail',compact('product'));

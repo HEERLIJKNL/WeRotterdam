@@ -22,8 +22,8 @@
                         <div class="menu">
                             <ul>
                                 <li><a href="#/">Dashboard</a></li>
-                                <li><a href="/admin#/products">Producten</a></li>
-                                <li><a href="/admin#/categories">Categorieen</a></li>
+                                <li><a href="/admin/products">Producten</a></li>
+                                <li><a href="/admin/categories">Categorieen</a></li>
                                 <li><a href="/admin/pages">Pagina beheer</a></li>
                                 <li><a href="/admin/navigation">Menu beheer</a></li>
                             </ul>

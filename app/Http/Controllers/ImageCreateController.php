@@ -16,11 +16,23 @@ class ImageCreateController extends Controller {
 		return $this->createpolaroid($request);
 	}
 
+	private function createprofileimg(Request $request){
+		$img 		= Image::make($request->file('photo'));
+
+		$overlay 	= Image::make($root."/images/imagecreate/frame.png");
+
+
+
+		return $img->response('jpg');
+	}
+
 	private function createpolaroid(Request $request){
 		$root = $request->server('DOCUMENT_ROOT')."/public";
+
 		$bg =  Image::make($root.$request->input("bg_image"));
 
 		$img = Image::make($request->file('photo'))->fit(295,295);
+
 		$img->rotate(-16);
 
 		$bg->insert($img, 'top-left', 81, 56);

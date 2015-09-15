@@ -8,6 +8,7 @@ use App\Order;
 use App\Src\Buckaroo\Buckaroo;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
@@ -19,7 +20,7 @@ class PaymentController extends Controller {
 		/** Grab order and set payment method */
 		$order = Session::get('order');
 		$order->payment_method = Request::input('payment');
-
+		$order->payment_total = Cart::total() + Config::get("site_settings.deliverycosts");
 		/** Auth check and save */
 		if(Auth::check()) {
 			Auth::user()->orders()->save($order);
@@ -29,7 +30,7 @@ class PaymentController extends Controller {
 
 		/** Fetch payment form and submit */
 		return $buckaroo->fetchForm([
-			'price' => 10,
+			'price' => $order->payment_total,
 			'payment_method' => Request::input('payment'),
 			'payment_bank' => Request::input('bank'),
 			'return_url' => 'http://local.werotterdam.com/shoppingcart/payment/success',
@@ -43,6 +44,7 @@ class PaymentController extends Controller {
 
 		$order = Order::find($buckaroo->invoice_nr(Request::all()));
 		$order->payed = 1;
+		$order->saveitems(Cart::content());
 		$order->save();
 
 		$event = Event::fire(new ItemsPurchasedEvent($order,Cart::content()));

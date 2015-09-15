@@ -43,24 +43,13 @@
                     @endif
 
                     <div class="detail-box">
-                        <span>Prijs</span>&euro;{{$product->price}}
-                    </div>
-                    <div class="detail-box">
-                        <span>Kleur</span>
-                        <a href="#" data-val="white" class="clr-pick white"></a>
-                        <a href="#" data-val="red" class="clr-pick red"></a>
-                        <a href="#" data-val="green" class="clr-pick green active"></a>
-                        <a href="#" data-val="blue" class="clr-pick blue"></a>
-                        <a href="#" data-val="orange" class="clr-pick orange"></a>
+                        <span>Prijs</span>&euro; {{number_format($product->price,2,",","")}}
                     </div>
                     <div class="detail-box">
                         <span>Maten</span>
-                        <a href="#" data-val="S" class="size-pick">S</a>
-                        <a href="#" data-val="M" class="size-pick">M</a>
-                        <a href="#" data-val="L" class="size-pick">L</a>
-                        <a href="#" data-val="XL" class="size-pick">XL</a>
-                        <a href="#" data-val="XXL" class="size-pick">XXL</a>
-
+                        @foreach($product->sizes AS $size)
+                            <a href="#" data-val="{{ $size->size }}" class="size-pick">{{ $size->size }}</a>
+                        @endforeach
                     </div>
                     <div class="info-box">
                         <p>{{$product->description}}</p>
@@ -121,6 +110,7 @@
         $(".amount-plus").click(function(e){
             e.preventDefault();
             var amount = parseInt(amountinput.val()) + 1;
+            if(amount > 10) amount = 10;
             amountinput.val(amount);
             amountdisplay.html(amount);
         })
