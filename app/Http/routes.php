@@ -11,6 +11,10 @@ Route::group(['middleware' => 'auth.admin'], function () {
 
 	Route::resource('admin/general',				'Cms\GeneralController');
 
+	Route::get('admin/orders',						'Cms\CmsController@index');
+
+	Route::get('admin/users',						'Cms\CmsController@index');
+
 	Route::get('admin/images/{id}/destroy',			'Cms\ImageController@destroy');
 
 	/** Categories */
