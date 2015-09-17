@@ -9,12 +9,11 @@
 			<div class="new-product right">
 				<div class="info">
 					<div class="title">
-						Witte sweater <span>dames</span>
+						Sweater WIT <span>dames</span>
 					</div>
 					<div class="sizes">
 						Maten:
 						<ul>
-							<li>XS</li>
 							<li>S</li>
 							<li>M</li>
 							<li>L</li>
@@ -22,7 +21,7 @@
 						</ul>
 					</div>
 				</div>
-				<a href="#" class="details">Details</a>
+				<a href="/product/witte-dames-sweater" class="details">Details</a>
 				<img class="preview" src="images/alpha_shirt_1.png" />
 			</div>
 
@@ -31,12 +30,11 @@
 				<div class="new-product left">
 					<div class="info">
 						<div class="title">
-							Witte sweater <span>heren</span>
+							Sweater WIT <span>heren</span>
 						</div>
 						<div class="sizes">
 							Maten:
 							<ul>
-								<li>XS</li>
 								<li>S</li>
 								<li>M</li>
 								<li>L</li>
@@ -44,7 +42,7 @@
 							</ul>
 						</div>
 					</div>
-					<a href="#" class="details">Details</a>
+					<a href="/product/witte-heren-sweater" class="details">Details</a>
 					<img class="preview" src="images/alpha_shirt_2.png" />
 				</div>
 			</div>
