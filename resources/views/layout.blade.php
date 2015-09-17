@@ -25,7 +25,7 @@
     <div class="row">
     <footer>
         <div class="col-md-3">
-            <span class="category">We'Rotterdam</span>
+            <span class="category">We'rotterdam</span>
             <a href="#">Over ons</a>
             <a href="#">Contact</a>
             <a href="#">Producten</a>
