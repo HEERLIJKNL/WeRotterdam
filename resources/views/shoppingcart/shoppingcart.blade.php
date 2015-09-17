@@ -45,6 +45,7 @@
                                 </div>
                                 <div class="info">
                                     <div class="product-title">{{$cartitem->name}}</div>
+                                    <div class="product-options">Maat: <span>{{$cartitem->options->size}}</span></div>
                                     <div class="product-description"></div>
                                 </div>
                             </div>

@@ -290,6 +290,16 @@ footer .category{
 .product-line{
     margin: 10px 0px;
     padding:0px;
+}
+.product-line .product-options span {
+    display: inline-block;
+    background: rgb(234, 234, 234);
+    padding: 0px 6px;
+    font-weight: bold;
+    border: 1px solid rgb(223, 223, 223);
+    color: #12AF0D;
+}
+.product-options {
 
 }
 .product:hover{
