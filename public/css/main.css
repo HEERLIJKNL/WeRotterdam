@@ -110,6 +110,7 @@ footer .category{
 }
 .social-items li{
     float:left;
+    margin-right: 4px;
 }
 .social-items li a{
     background: url('/images/social-sprite.png');

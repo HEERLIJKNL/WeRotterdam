@@ -39,6 +39,9 @@
                 <li>
                     <a class="fb" href="https://www.facebook.com/Werotterdam"></a>
                 </li>
+                <li>
+                    <a class="tw" href="https://twitter.com/We_rotterdam"></a>
+                </li>
             </ul>
         </div>
     </footer>
