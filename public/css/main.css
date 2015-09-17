@@ -166,10 +166,30 @@ footer .category{
     overflow:hidden;
 
     margin-left:4px;
+    position: relative;
 }
 .slider img{
     width:100%;
 }
+.slider img.p-1, .slider img.p-2{
+    z-index:10;
+    top:20px;
+    position:absolute;
+    width:auto;
+}
+
+.slider img.tt-1, .slider img.tt-2{
+    z-index:10;
+    position:absolute;
+    right:0px;
+    width:auto;
+}
+
+
+.slider img.p-1{left:40px;}
+.slider img.p-2{right:40px;}
+.slider img.tt-1{bottom:20px}
+.slider img.tt-2{bottom:44px;}
 
 .menu{
     background-color:#12af0d;

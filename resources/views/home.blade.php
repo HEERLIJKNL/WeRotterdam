@@ -58,7 +58,13 @@
 		</div>
 		<div class="h-group h-right">
 			<div class="slider">
-				<img src="images/header_img_02.jpg"/>
+				<img src="images/header/background_layer.jpg"/>
+
+				<img src="images/header/product-1.png" class="p-1 wow bounceInUp" data-wow-delay=".4s" />
+				<img src="images/header/product-2.png" class="p-2 wow bounceInUp" data-wow-delay=".6s" />
+
+				<img src="images/header/text-1.png" class="tt-2 wow bounceInRight" />
+				<img src="images/header/text-2.png" class="tt-1 wow bounceInRight" data-wow-delay=".8s" />
 			</div>
 		</div>
 	</div>
@@ -92,4 +98,7 @@
 		@endforeach
 	</div>
 </div>
+
+<script src="/js/wow.min.js" type="text/javascript"></script>
+<script type="text/javascript">new WOW().init();</script>
 @endsection

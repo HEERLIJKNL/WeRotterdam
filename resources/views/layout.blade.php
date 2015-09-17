@@ -7,6 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
     <link href="/css/bootstrap.min.css" rel='stylesheet' type="text/css">
     <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/css/animate.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="container main">
