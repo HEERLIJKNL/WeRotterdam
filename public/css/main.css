@@ -102,6 +102,24 @@ footer .category{
     color: #9d9d9d;
 }
 
+/** Social items */
+.social-items{
+    list-style: none;
+    margin:10px 0px 0px 0px;
+    padding:0px;
+}
+.social-items li{
+    float:left;
+}
+.social-items li a{
+    background: url('/images/social-sprite.png');
+    width:31px;
+    height:31px;
+}
+.social-items li a.fb{
+    background-position-x: 31;
+}
+
 /** HEADER products left */
 .new-product{
     height:142px;

@@ -35,7 +35,11 @@
         <div class="col-md-3"></div>
         <div class="col-md-3">
             <span class="category">Social</span>
-
+            <ul class="social-items">
+                <li>
+                    <a class="fb" href="https://www.facebook.com/Werotterdam"></a>
+                </li>
+            </ul>
         </div>
     </footer>
     </div>
