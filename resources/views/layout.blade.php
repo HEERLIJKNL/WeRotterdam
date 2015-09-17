@@ -25,32 +25,17 @@
     <div class="row">
     <footer>
         <div class="col-md-3">
-            <span class="category">Vragen</span>
+            <span class="category">We'Rotterdam</span>
             <a href="#">Over ons</a>
             <a href="#">Contact</a>
             <a href="#">Producten</a>
             <a href="#">Veelgestelde vragen</a>
         </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
         <div class="col-md-3">
-            <span class="category">Onze producten</span>
-            <a href="#">Over ons</a>
-            <a href="#">Contact</a>
-            <a href="#">Producten</a>
-            <a href="#">Veelgestelde vragen</a>
-        </div>
-        <div class="col-md-3">
-            <span class="category">Volg ons</span>
-            <a href="#">Over ons</a>
-            <a href="#">Contact</a>
-            <a href="#">Producten</a>
-            <a href="#">Veelgestelde vragen</a>
-        </div>
-        <div class="col-md-3">
-            <span class="category">Meer over ons</span>
-            <a href="#">Over ons</a>
-            <a href="#">Contact</a>
-            <a href="#">Producten</a>
-            <a href="#">Veelgestelde vragen</a>
+            <span class="category">Social</span>
+
         </div>
     </footer>
     </div>

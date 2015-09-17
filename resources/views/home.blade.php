@@ -6,7 +6,7 @@
 		<div class="h-group h-left">
 
 
-			<div class="new-product right">
+			<a href="/product/witte-dames-sweater" class="new-product right">
 				<div class="info">
 					<div class="title">
 						Sweater WIT <span>dames</span>
@@ -21,12 +21,12 @@
 						</ul>
 					</div>
 				</div>
-				<a href="/product/witte-dames-sweater" class="details">Details</a>
+				<span class="details">Details</span>
 				<img class="preview" src="images/alpha_shirt_1.png" />
-			</div>
+			</a>
 
 
-			<div class="new-product ">
+			<a href="/product/witte-heren-sweater" class="new-product ">
 				<div class="new-product left">
 					<div class="info">
 						<div class="title">
@@ -42,10 +42,10 @@
 							</ul>
 						</div>
 					</div>
-					<a href="/product/witte-heren-sweater" class="details">Details</a>
+					<span class="details">Details</span>
 					<img class="preview" src="images/alpha_shirt_2.png" />
 				</div>
-			</div>
+			</a>
 
 			<form action="/imagecreate" class="photo-logo-creator" method="post" target="_blank" enctype="multipart/form-data">
 				<input type="file" name="photo" />
@@ -77,18 +77,18 @@
 				@foreach($products AS $product)
 					@if($product->supply())
 					<div class="col-md-3 product-line">
-						<div class="product">
+						<a href="/product/{{$product->slug}}" class="product">
 							@if(count($product->images))
 								<div class="placeholder grow">
 									<img src="/images/products/med_{{$product->images[0]->image}}">
 								</div>
 							@endif
 							<div>{{$product->name}}</div>
-							<a href="/product/{{$product->slug}}" class="detail">
+							<div class="detail">
 								<span class="glyphicon glyphicon-search" aria-hidden="true"></span> Details
 								<div class="price">&euro; {{number_format($product->price, 2, ',', ' ')}}</div>
-							</a>
-						</div>
+							</div>
+						</a>
 					</div>
 					@endif
 				@endforeach

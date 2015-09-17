@@ -7,6 +7,6 @@ return array(
 	"deliverycosts" => 8.95,
 	"email" => "info@werotterdam.com",
 	"sizes" => array(
-			"XS","S","M","L","XL","XXL"
+			"S","M","L","XL"
 		)
 );

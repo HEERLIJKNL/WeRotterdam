@@ -4,10 +4,7 @@
 <div class="product-detail-container">
     <div class="row">
         <div class="col-md-12">
-            <ul class="bread-crumb">
-                <li>Kleding</li>
-                <li>Truien</li>
-            </ul>
+            <ul class="bread-crumb"></ul>
             <h2>{{$product->name}}</h2>
         </div>
     </div>
