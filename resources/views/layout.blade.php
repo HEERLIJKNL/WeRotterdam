@@ -42,6 +42,9 @@
                 <li>
                     <a class="tw" href="https://twitter.com/We_rotterdam"></a>
                 </li>
+                <li>
+                    <a class="inst" href="https://instagram.com/werotterdam/"></a>
+                </li>
             </ul>
         </div>
     </footer>
