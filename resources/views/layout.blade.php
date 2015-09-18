@@ -37,13 +37,13 @@
             <span class="category">Social</span>
             <ul class="social-items">
                 <li>
-                    <a class="fb" href="https://www.facebook.com/Werotterdam"></a>
+                    <a target="_blank" class="fb" href="https://www.facebook.com/Werotterdam"></a>
                 </li>
                 <li>
-                    <a class="tw" href="https://twitter.com/We_rotterdam"></a>
+                    <a target="_blank" class="tw" href="https://twitter.com/We_rotterdam"></a>
                 </li>
                 <li>
-                    <a class="inst" href="https://instagram.com/werotterdam/"></a>
+                    <a target="_blank" class="inst" href="https://instagram.com/werotterdam/"></a>
                 </li>
             </ul>
         </div>
