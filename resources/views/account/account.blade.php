@@ -12,34 +12,39 @@
 
             <div class="order-history">
                 <ul class="orders">
-                    @foreach($orders AS $order)
-                    <li>
-                    <div class="order-details block">
-                        <div class="order-date">{{$order->created_at->diffForHumans()}}</div>
-                        <table>
-                            @foreach($order->Items AS $item)
-                            <tr>
-                                <td class="r-img"><img src="/images/products/tmb_{{$item->Product->images[0]->image}}" /></td>
-                                <td class="r-description">
-                                    <div>{{$item->Product->name}}</div>
-                                    <div class="r-size">{{$item->size}}</div>
-                                </td>
-                                <td class="r-price">&euro; {{number_format($item->price,2,",","")}}</td>
-                                <td class="r-amount">{{$item->amount}}</td>
-                                <td class="r-ptotal">&euro; {{number_format(($item->amount * $item->price),2,",","")}}</td>
-                            </tr>
-                            @endforeach
-                            <tr class="r-total">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>Betaald:</td>
-                                <td>&euro; {{number_format($order->payment_total,2,",","")}}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    </li>
-                    @endforeach
+                    @if(count($orders))
+                        @foreach($orders AS $order)
+                        <li>
+                        <div class="order-details block">
+                            <div class="order-date">{{$order->created_at->diffForHumans()}}</div>
+                            <table>
+                                @foreach($order->Items AS $item)
+                                <tr>
+                                    <td class="r-img"><img src="/images/products/tmb_{{$item->Product->images[0]->image}}" /></td>
+                                    <td class="r-description">
+                                        <div>{{$item->Product->name}}</div>
+                                        <div class="r-size">{{$item->size}}</div>
+                                    </td>
+                                    <td class="r-price">&euro; {{number_format($item->price,2,",","")}}</td>
+                                    <td class="r-amount">{{$item->amount}}</td>
+                                    <td class="r-ptotal">&euro; {{number_format(($item->amount * $item->price),2,",","")}}</td>
+                                </tr>
+                                @endforeach
+                                <tr class="r-total">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Betaald:</td>
+                                    <td>&euro; {{number_format($order->payment_total,2,",","")}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        </li>
+                        @endforeach
+                    @else
+                        <li class="no-orders">Er zijn nog geen bestellingen geplaatst.</li>
+                    @endif
+
                 </ul>
             </div>
 

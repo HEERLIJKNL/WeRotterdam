@@ -853,6 +853,12 @@ ul.product-img-thumbs img {
 
     position:relative;
 }
+.dashboard .no-orders{
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+}
 .dashboard .order-history td{
     padding: 4px 4px;
     background-color: #E9E9E9;

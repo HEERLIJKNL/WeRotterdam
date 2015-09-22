@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Order;
 use App\product;
+use App\Services\AccountRegistrar;
 use App\Src\Buckaroo\Buckaroo;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -23,7 +24,7 @@ class ShoppingcartController extends Controller {
 	 * @param Guard $auth
 	 * @param Registrar $registrar
      */
-	public function __construct(Guard $auth, Registrar $registrar)
+	public function __construct(Guard $auth, AccountRegistrar $registrar)
 	{
 		$this->auth = $auth;
 		$this->registrar = $registrar;
