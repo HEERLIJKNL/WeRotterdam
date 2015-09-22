@@ -23,6 +23,13 @@ $(function(){
 
     $(uploadbar + " img").click(function(){
         $(form + " .bg-image").val($(this).attr("src"));
+
+        if((uploadbar + " input[name='halloffame']").length > 0){
+            if($(uploadbar + " input[name='halloffame']").is(":checked")) {
+                $(form + " input[name='add_to_halloffame']").val($(uploadbar + " input[name='halloffame']").val());
+            }
+        }
+
         $(form).submit();
     })
 

@@ -40,11 +40,9 @@ Route::get('home', 						'HomeController@index');
 
 Route::get('product/{slug}', 			'ProductController@detail');
 
-/*
-Route::get('contact',function(){
-	return view("contact.contact");
-});
-*/
+Route::get('account',					'AccountController@index');
+Route::post('account/login',			'AccountController@login');
+Route::post('account/register',			'AccountController@postRegister');
 
 Route::get('shoppingcart',				'ShoppingcartController@index');
 Route::get('shoppingcart/add/{id}',		'ShoppingcartController@add');

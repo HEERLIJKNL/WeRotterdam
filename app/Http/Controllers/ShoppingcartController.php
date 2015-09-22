@@ -27,6 +27,8 @@ class ShoppingcartController extends Controller {
 	{
 		$this->auth = $auth;
 		$this->registrar = $registrar;
+
+		parent::__construct();
 	}
 
 	/**

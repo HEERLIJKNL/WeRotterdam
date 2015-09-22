@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Session;
 
 class PaymentController extends Controller {
 
+	public function __construct(){
+		parent::__construct();
+	}
+
 	public function pay(Buckaroo $buckaroo){
 
 		/** Grab order and set payment method */

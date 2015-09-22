@@ -10,6 +10,12 @@ body{
     background-attachment: fixed;
 }
 
+.btn-blue{ color:white; padding: 10px 30px; border-radius:0px; background:#0093FF; }
+.btn-blue:hover{ color:white; padding: 10px 30px; border-radius:0px; background:#0093FF; }
+
+.btn-grey{ color:white; padding: 10px 30px; border-radius:0px; background:grey; }
+.btn-grey:hover{ color:white; padding: 10px 30px; border-radius:0px; background:grey; }
+
 h2{
     color: #15af0d;
     font-weight: bold;
@@ -28,11 +34,31 @@ a:hover{
     color: rgb(24, 24, 24);
     text-decoration:none;
 }
+
+.account-nav{
+    position: absolute;
+    right: 10;
+    top: -36px;
+    display: block;
+    padding: 8px 20px;
+    background-color: #0093FF;
+    font-weight: bold;
+    color: white;
+    z-index: 15;
+}
+.account-nav span{
+    font-weight:normal;
+}
+.account-nav a{color:white;}
+.account-nav a:hover{color:white;}
+
 .main{
     background-color: white;
     /*box-shadow: 0px 0px 36px rgb(9, 62, 104);*/
     box-shadow:0px 0px 36px rgb(53, 53, 53);
     margin-top:40px;
+
+    position:relative;
 }
 
 .title-bar{
@@ -408,6 +434,19 @@ footer .category{
     z-index: 11;
     border-top: 2px solid rgb(43, 43, 43);
     border-bottom: 2px solid rgb(43, 43, 43);
+
+    text-align:center;
+}
+.imagecreatepopup .checkbox{
+    margin-top:0px;
+    font-size:20px;
+}
+.imagecreatepopup .checkbox input[type="checkbox"]{
+    top: 4px;
+}
+.imagecreatepopup .checkbox span {
+    color: green;
+    font-weight: bold;
 }
 .imagecreatepopup ul{
     list-style-image: none;
@@ -737,4 +776,110 @@ ul.product-img-thumbs img {
     font-weight: bold;
     font-size: 30px;
     margin: 0px 0px 10px 0px;
+}
+
+/** ACCOUNT PAGE */
+.account-container {
+    padding: 30px 60px;
+    margin: 16px 8px 16px 8px;
+}
+
+.account-container h2{
+    font-size:20px;
+    color:grey;
+}
+
+.account-container label {
+    color: grey;
+    font-weight: normal;
+}
+.account-container label span {
+    font-size: 12px;
+    color: rgb(18, 175, 13);
+    font-weight: bold;
+}
+
+.account-container .account-create-container {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(223, 223, 223);
+}
+
+.account-container.create {
+    background-color: #F0F0F0;
+}
+.account-container.msg{
+    padding:0px;
+}
+
+
+/** Account dashboard */
+.dashboard{
+
+}
+.dashboard h2{
+    margin: 10px 0px;
+    color: #434343;
+}
+.dashboard h3{
+    font-size:18px;
+    color:#0093ff;
+    margin: 10px 0px;
+}
+.dashboard .account-data{
+    color:#808080;
+}
+.dashboard .account-data span{
+    color:#434343;
+    font-weight:bold;
+}
+.dashboard .order-history .orders{
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+.dashboard .order-history .order-date{
+    position: absolute;
+    top: -29px;
+    right: 0px;
+    background-color: #dfdfdf;
+    padding: 4px 20px;
+}
+.dashboard .block{
+    border-top:1px solid #dfdfdf;
+    margin-bottom:50px;
+    padding-top: 10px;
+
+    position:relative;
+}
+.dashboard .order-history td{
+    padding: 4px 4px;
+    background-color: #E9E9E9;
+}
+.dashboard .order-history .r-total td{
+    background-color:white;
+}
+.dashboard .order-history table{
+    width:100%;
+}
+.dashboard .order-history .r-size{
+    color:#0093ff;
+}
+.dashboard .order-history .r-img {
+    width:75px;
+}
+.dashboard .order-history .r-img img{
+    width:50px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10%;
+}
+.dashboard .order-history .r-price {
+    width:20%;
+}
+.dashboard .order-history .r-amount {
+    width:10%;
+}
+.dashboard .order-history .r-ptotal{
+    width:20%;
 }

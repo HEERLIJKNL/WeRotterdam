@@ -11,6 +11,11 @@
 </head>
 <body>
 <div class="container main">
+    @if($user)
+    <div class="account-nav">
+        <span><a href="/account">{{$user->name}}</a></span> | <a href="/auth/logout">uitloggen</a>
+    </div>
+    @endif
     <div class="row">
         <div class="top-bar">
             <div class="logo">
@@ -54,6 +59,9 @@
 <div class="imagecreatepopup-bg"></div>
 <div class="imagecreatepopup">
     <div class="title">Selecteer een foto</div>
+    <div class="checkbox">
+        <label><input name="halloffame" value="yes" type="checkbox">Zet mijn foto in de <span>Hall of Fame!</span></label>
+    </div>
     <ul>
         <li><img src='/images/imagecreate/polaroidgreenbg.jpg'></li>
         <li><img src='/images/imagecreate/simple.jpg'></li>

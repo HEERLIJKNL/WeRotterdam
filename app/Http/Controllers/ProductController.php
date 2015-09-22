@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller {
 
+	public function __construct(){
+
+		parent::__construct();
+
+	}
+
 	public function detail($slug){
 
 		$product = product::where("slug", "=" , $slug)->with('images','sizes')->first();

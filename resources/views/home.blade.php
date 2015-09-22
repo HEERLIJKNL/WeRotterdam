@@ -50,6 +50,7 @@
 			<form action="/imagecreate" class="photo-logo-creator" method="post" target="_blank" enctype="multipart/form-data">
 				<input type="file" name="photo" />
 				<input type="hidden" name="bg_image" class="bg-image" />
+				<input type="hidden" name="add_to_halloffame" value="no" />
 				<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 				<div class="photo-logo-btn"></div>
 			</form>
