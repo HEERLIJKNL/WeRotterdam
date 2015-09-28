@@ -748,6 +748,7 @@ ul.product-img-thumbs img {
 /* Content pieces */
 .ct{
     margin-bottom:50px;
+    overflow: auto;
 }
 .ct .c-pad{
     padding-left:0px;

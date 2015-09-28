@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="ct">
-        <div class="row">
+        <div class="contact-info">
             <h2>Contact</h2>
             <div class="green-bar">
                 <strong>Retouren</strong><br />
@@ -13,10 +13,13 @@
                 Heeft u na contact met onze klantenservice nog een klacht? Om deze klacht zo snel mogelijk op te kunnen lossen, adviseren wij u om telefonisch contact met ons op te nemen via 010 - 211 00 90, of een e-mail te sturen naar ons via dit formulier.
             </div>
         </div>
-        <div class="row">
+        <div class="contact-form">
             <div class="col-md-6 c-pad">
                 <div class="page-sub-title">Contactformulier</div>
                 <div class="light-grey ct-container">
+                    @if(Session::has('success'))
+                        {{Session::get('success')}}
+                    @else
                     <form method="post">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Voornaam</label>
@@ -46,6 +49,7 @@
                             <button type="submit" class="g-btn pull-right">Versturen</button>
                         </div>
                     </form>
+                    @endif
                 </div>
             </div>
 

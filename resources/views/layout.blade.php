@@ -32,7 +32,7 @@
         <div class="col-md-3">
             <span class="category">We'rotterdam</span>
             <a href="#">Over ons</a>
-            <a href="#">Contact</a>
+            <a href="/contact">Contact</a>
             <a href="#">Producten</a>
             <a href="#">Veelgestelde vragen</a>
         </div>
